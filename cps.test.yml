@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql.cps.test:
+      image: mysql
+      restart: always
+      volumes: 
+       - ./dbtest2:/var/lib/mysql
+      #ports:
+       #- hostport:clientport
+      #depends_on:
+       #- service-name-here
+      environment: 
+        MYSQL_ROOT_PASSWORD: test123!

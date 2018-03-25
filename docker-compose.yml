@@ -1,0 +1,14 @@
+version: '3'
+services:
+  localdb:
+      image: mysql:latest
+      restart: always
+      volumes: 
+       - /home/angus/Desktop/dbtest:/var/lib/mysql
+      #ports:
+       #- hostport:clientport
+      #depends_on:
+       #- service-name-here
+      environment: 
+        MYSQL_ROOT_PASSWORD: test123!
+  
