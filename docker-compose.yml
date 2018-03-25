@@ -11,4 +11,18 @@ services:
        #- service-name-here
       environment: 
         MYSQL_ROOT_PASSWORD: test123!
+  dotnetapp:
+      image: microsoft/aspnetcore-build
+      #restart:always
+      depends_on: 
+        - localdb
+      volumes:
+        - ./dotnetApps/app2:/app
+      ports:
+        - 8888:5000
+      working_dir: /app
+      command: 
+        dotnet /app/app2.dll --urls=http://*:5000
+      
+
   
