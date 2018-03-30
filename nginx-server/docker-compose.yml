@@ -1,0 +1,12 @@
+version: '3'
+services:
+ nginxserver:
+      image: nginx:latest
+      #depends_on:
+       #- dotnetapp
+      ports: 
+       - 443:443
+      volumes:
+       - ./:/ngxhost
+      command:
+       [nginx,'-p','/ngxhost','-c', 'nginx.conf','-g','daemon off;'] 
