@@ -4,7 +4,8 @@ services:
       image: mysql:latest
       #restart: always
       volumes: 
-       - /home/angus/Desktop/dbtest:/var/lib/mysql
+       - ./db/data:/var/lib/mysql
+       - ./db/scripts:/mysqlscripts
       #ports:
        #- hostport:clientport
       #depends_on:
