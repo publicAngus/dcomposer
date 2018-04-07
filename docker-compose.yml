@@ -38,6 +38,7 @@ services:
        - 80:80
       volumes:
        - ./nginx-server:/ngxhost
+       - /etc/letsencrypt:/etc/letsencrypt
       command:
        [nginx,'-p','/ngxhost','-c', 'nginx.conf','-g','daemon off;'] 
       
