@@ -19,3 +19,9 @@ apt-get install \
    add-apt-repository ppa:certbot/certbot
    apt-get update
    apt-get install certbot
+
+
+    echo "-----------installed version check-----------"
+    echo "docker         >> $(docker --version)"
+    echo "docker-compose >> $(docker-compose --version)"
+    echo "certbot        >> $(certbot --version)"
